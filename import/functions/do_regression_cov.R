@@ -1,6 +1,9 @@
 # Obtain statistics for linear regression
 
 # we need to correct the F test to differentiate between the model with intercept + covariate and the model with intercept, covariate and rhythmicity.
+
+# originally from the matrixStats R package
+
 do_regression_cov <- function(Y, X) {
   betas <- matrix(NA, nrow=ncol(X), ncol=nrow(Y))
     lower_bounds <- matrix(NA, nrow = ncol(X), ncol = nrow(Y))
